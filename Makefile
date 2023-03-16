@@ -1,8 +1,6 @@
 install:
-	mkdir -p /opt/local/GBKunzip
-	cp ./gbkunzip /opt/local/GBKunzip
-	cp ./gbzip.py /opt/local/GBKunzip
-	chmod 755 /opt/local/GBKunzip/gbkunzip
+	install -Dm755 ./gbkunzip /opt/local/GBKunzip/gbkunzip
+	install -Dm644 ./gbzip.py /opt/local/GBKunzip/gbzip.py
 	ln -s /opt/local/GBKunzip/gbkunzip /usr/local/bin
 
 uninstall:
